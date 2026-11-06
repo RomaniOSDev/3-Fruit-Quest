@@ -3,48 +3,272 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 110;
+	objectVersion = 60;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		30BAC5E0309E5944001B2D45 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5AB309E5944001B2D45 /* CustomTabBar.swift */; };
+		30BAC5E1309E5944001B2D45 /* GroveButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5AC309E5944001B2D45 /* GroveButtons.swift */; };
+		30BAC5E2309E5944001B2D45 /* IllustratedCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5AD309E5944001B2D45 /* IllustratedCells.swift */; };
+		30BAC5E3309E5944001B2D45 /* LivingFruitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5AE309E5944001B2D45 /* LivingFruitView.swift */; };
+		30BAC5E4309E5944001B2D45 /* RitualAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5AF309E5944001B2D45 /* RitualAnimations.swift */; };
+		30BAC5E5309E5944001B2D45 /* ScreenHeroImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5B0309E5944001B2D45 /* ScreenHeroImage.swift */; };
+		30BAC5E6309E5944001B2D45 /* SharedUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5B1309E5944001B2D45 /* SharedUI.swift */; };
+		30BAC5E7309E5944001B2D45 /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5B3309E5944001B2D45 /* AppBackgroundView.swift */; };
+		30BAC5E8309E5944001B2D45 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5B4309E5944001B2D45 /* AppTheme.swift */; };
+		30BAC5E9309E5944001B2D45 /* View+ScreenChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5B5309E5944001B2D45 /* View+ScreenChrome.swift */; };
+		30BAC5EA309E5944001B2D45 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5B8309E5944001B2D45 /* HomeView.swift */; };
+		30BAC5EB309E5944001B2D45 /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5BA309E5944001B2D45 /* InsightsView.swift */; };
+		30BAC5EC309E5944001B2D45 /* ActivityLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5BC309E5944001B2D45 /* ActivityLogView.swift */; };
+		30BAC5ED309E5944001B2D45 /* AddActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5BD309E5944001B2D45 /* AddActivitySheet.swift */; };
+		30BAC5EE309E5944001B2D45 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5BF309E5944001B2D45 /* OnboardingView.swift */; };
+		30BAC5EF309E5944001B2D45 /* QuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5C1309E5944001B2D45 /* QuestsView.swift */; };
+		30BAC5F0309E5944001B2D45 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5C3309E5944001B2D45 /* SettingsView.swift */; };
+		30BAC5F1309E5944001B2D45 /* ActivityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5C6309E5944001B2D45 /* ActivityEntry.swift */; };
+		30BAC5F2309E5944001B2D45 /* AppLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5C7309E5944001B2D45 /* AppLinks.swift */; };
+		30BAC5F3309E5944001B2D45 /* FruitSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5C8309E5944001B2D45 /* FruitSpecies.swift */; };
+		30BAC5F4309E5944001B2D45 /* PetMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5C9309E5944001B2D45 /* PetMood.swift */; };
+		30BAC5F5309E5944001B2D45 /* PetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5CA309E5944001B2D45 /* PetProfile.swift */; };
+		30BAC5F6309E5944001B2D45 /* PetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5D2309E5944001B2D45 /* PetStore.swift */; };
+		30BAC5F7309E5944001B2D45 /* VitalityEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5D3309E5944001B2D45 /* VitalityEngine.swift */; };
+		30BAC5F8309E5944001B2D45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5D5309E5944001B2D45 /* AppDelegate.swift */; };
+		30BAC5F9309E5944001B2D45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5D7309E5944001B2D45 /* ContentView.swift */; };
+		30BAC5FA309E5944001B2D45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5DD309E5944001B2D45 /* SceneDelegate.swift */; };
+		30BAC5FB309E5944001B2D45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BAC5DE309E5944001B2D45 /* ViewController.swift */; };
+		30BAC5FC309E5944001B2D45 /* Fredoka-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5CC309E5944001B2D45 /* Fredoka-Bold.ttf */; };
+		30BAC5FD309E5944001B2D45 /* Fredoka-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5CD309E5944001B2D45 /* Fredoka-Medium.ttf */; };
+		30BAC5FE309E5944001B2D45 /* Fredoka-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5CE309E5944001B2D45 /* Fredoka-Regular.ttf */; };
+		30BAC5FF309E5944001B2D45 /* Fredoka-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5CF309E5944001B2D45 /* Fredoka-SemiBold.ttf */; };
+		30BAC600309E5944001B2D45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5D6309E5944001B2D45 /* Assets.xcassets */; };
+		30BAC602309E5944001B2D45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5DA309E5944001B2D45 /* LaunchScreen.storyboard */; };
+		30BAC603309E5944001B2D45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30BAC5DC309E5944001B2D45 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		2AA704F3B633DBC194F7F24A /* Pods-3 Fruit Quest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3 Fruit Quest.debug.xcconfig"; path = "Target Support Files/Pods-3 Fruit Quest/Pods-3 Fruit Quest.debug.xcconfig"; sourceTree = "<group>"; };
+		30BAC5AB309E5944001B2D45 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		30BAC5AC309E5944001B2D45 /* GroveButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveButtons.swift; sourceTree = "<group>"; };
+		30BAC5AD309E5944001B2D45 /* IllustratedCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustratedCells.swift; sourceTree = "<group>"; };
+		30BAC5AE309E5944001B2D45 /* LivingFruitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingFruitView.swift; sourceTree = "<group>"; };
+		30BAC5AF309E5944001B2D45 /* RitualAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RitualAnimations.swift; sourceTree = "<group>"; };
+		30BAC5B0309E5944001B2D45 /* ScreenHeroImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHeroImage.swift; sourceTree = "<group>"; };
+		30BAC5B1309E5944001B2D45 /* SharedUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUI.swift; sourceTree = "<group>"; };
+		30BAC5B3309E5944001B2D45 /* AppBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
+		30BAC5B4309E5944001B2D45 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		30BAC5B5309E5944001B2D45 /* View+ScreenChrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ScreenChrome.swift"; sourceTree = "<group>"; };
+		30BAC5B8309E5944001B2D45 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		30BAC5BA309E5944001B2D45 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		30BAC5BC309E5944001B2D45 /* ActivityLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogView.swift; sourceTree = "<group>"; };
+		30BAC5BD309E5944001B2D45 /* AddActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySheet.swift; sourceTree = "<group>"; };
+		30BAC5BF309E5944001B2D45 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		30BAC5C1309E5944001B2D45 /* QuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestsView.swift; sourceTree = "<group>"; };
+		30BAC5C3309E5944001B2D45 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30BAC5C6309E5944001B2D45 /* ActivityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntry.swift; sourceTree = "<group>"; };
+		30BAC5C7309E5944001B2D45 /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
+		30BAC5C8309E5944001B2D45 /* FruitSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitSpecies.swift; sourceTree = "<group>"; };
+		30BAC5C9309E5944001B2D45 /* PetMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetMood.swift; sourceTree = "<group>"; };
+		30BAC5CA309E5944001B2D45 /* PetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfile.swift; sourceTree = "<group>"; };
+		30BAC5CC309E5944001B2D45 /* Fredoka-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fredoka-Bold.ttf"; sourceTree = "<group>"; };
+		30BAC5CD309E5944001B2D45 /* Fredoka-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fredoka-Medium.ttf"; sourceTree = "<group>"; };
+		30BAC5CE309E5944001B2D45 /* Fredoka-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fredoka-Regular.ttf"; sourceTree = "<group>"; };
+		30BAC5CF309E5944001B2D45 /* Fredoka-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fredoka-SemiBold.ttf"; sourceTree = "<group>"; };
+		30BAC5D2309E5944001B2D45 /* PetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetStore.swift; sourceTree = "<group>"; };
+		30BAC5D3309E5944001B2D45 /* VitalityEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalityEngine.swift; sourceTree = "<group>"; };
+		30BAC5D5309E5944001B2D45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30BAC5D6309E5944001B2D45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30BAC5D7309E5944001B2D45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30BAC5D8309E5944001B2D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30BAC5D9309E5944001B2D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30BAC5DB309E5944001B2D45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30BAC5DD309E5944001B2D45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		30BAC5DE309E5944001B2D45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30D0F7833094CE5D004BDF71 /* 3 Fruit Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3 Fruit Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		571A6A6EF40843C58C5A11EB /* Pods_3_Fruit_Quest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_3_Fruit_Quest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C9C9AB6FE2D135BD11D247 /* Pods-3 Fruit Quest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-3 Fruit Quest.release.xcconfig"; path = "Target Support Files/Pods-3 Fruit Quest/Pods-3 Fruit Quest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		30D0F7953094CE5E004BDF71 /* Exceptions for "3 Fruit Quest" folder in "3 Fruit Quest" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 30D0F7823094CE5D004BDF71 /* 3 Fruit Quest */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		30D0F7853094CE5D004BDF71 /* 3 Fruit Quest */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				30D0F7953094CE5E004BDF71 /* Exceptions for "3 Fruit Quest" folder in "3 Fruit Quest" target */,
-			);
-			path = "3 Fruit Quest";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		30D0F7803094CE5D004BDF71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EDED965DB7F892A8A252FD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AA704F3B633DBC194F7F24A /* Pods-3 Fruit Quest.debug.xcconfig */,
+				F5C9C9AB6FE2D135BD11D247 /* Pods-3 Fruit Quest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		30BAC5B2309E5944001B2D45 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5AB309E5944001B2D45 /* CustomTabBar.swift */,
+				30BAC5AC309E5944001B2D45 /* GroveButtons.swift */,
+				30BAC5AD309E5944001B2D45 /* IllustratedCells.swift */,
+				30BAC5AE309E5944001B2D45 /* LivingFruitView.swift */,
+				30BAC5AF309E5944001B2D45 /* RitualAnimations.swift */,
+				30BAC5B0309E5944001B2D45 /* ScreenHeroImage.swift */,
+				30BAC5B1309E5944001B2D45 /* SharedUI.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30BAC5B6309E5944001B2D45 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5B3309E5944001B2D45 /* AppBackgroundView.swift */,
+				30BAC5B4309E5944001B2D45 /* AppTheme.swift */,
+				30BAC5B5309E5944001B2D45 /* View+ScreenChrome.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		30BAC5B7309E5944001B2D45 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5B2309E5944001B2D45 /* Components */,
+				30BAC5B6309E5944001B2D45 /* Design */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		30BAC5B9309E5944001B2D45 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5B8309E5944001B2D45 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30BAC5BB309E5944001B2D45 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5BA309E5944001B2D45 /* InsightsView.swift */,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		30BAC5BE309E5944001B2D45 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5BC309E5944001B2D45 /* ActivityLogView.swift */,
+				30BAC5BD309E5944001B2D45 /* AddActivitySheet.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		30BAC5C0309E5944001B2D45 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5BF309E5944001B2D45 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		30BAC5C2309E5944001B2D45 /* Quests */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5C1309E5944001B2D45 /* QuestsView.swift */,
+			);
+			path = Quests;
+			sourceTree = "<group>";
+		};
+		30BAC5C4309E5944001B2D45 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5C3309E5944001B2D45 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		30BAC5C5309E5944001B2D45 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5B9309E5944001B2D45 /* Home */,
+				30BAC5BB309E5944001B2D45 /* Insights */,
+				30BAC5BE309E5944001B2D45 /* Log */,
+				30BAC5C0309E5944001B2D45 /* Onboarding */,
+				30BAC5C2309E5944001B2D45 /* Quests */,
+				30BAC5C4309E5944001B2D45 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		30BAC5CB309E5944001B2D45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5C6309E5944001B2D45 /* ActivityEntry.swift */,
+				30BAC5C7309E5944001B2D45 /* AppLinks.swift */,
+				30BAC5C8309E5944001B2D45 /* FruitSpecies.swift */,
+				30BAC5C9309E5944001B2D45 /* PetMood.swift */,
+				30BAC5CA309E5944001B2D45 /* PetProfile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30BAC5D0309E5944001B2D45 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5CC309E5944001B2D45 /* Fredoka-Bold.ttf */,
+				30BAC5CD309E5944001B2D45 /* Fredoka-Medium.ttf */,
+				30BAC5CE309E5944001B2D45 /* Fredoka-Regular.ttf */,
+				30BAC5CF309E5944001B2D45 /* Fredoka-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		30BAC5D1309E5944001B2D45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5D0309E5944001B2D45 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30BAC5D4309E5944001B2D45 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5D2309E5944001B2D45 /* PetStore.swift */,
+				30BAC5D3309E5944001B2D45 /* VitalityEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		30BAC5DF309E5944001B2D45 /* 3 Fruit Quest */ = {
+			isa = PBXGroup;
+			children = (
+				30BAC5B7309E5944001B2D45 /* Core */,
+				30BAC5C5309E5944001B2D45 /* Features */,
+				30BAC5CB309E5944001B2D45 /* Models */,
+				30BAC5D1309E5944001B2D45 /* Resources */,
+				30BAC5D4309E5944001B2D45 /* Services */,
+				30BAC5D5309E5944001B2D45 /* AppDelegate.swift */,
+				30BAC5D6309E5944001B2D45 /* Assets.xcassets */,
+				30BAC5D7309E5944001B2D45 /* ContentView.swift */,
+				30BAC5D8309E5944001B2D45 /* Info.plist */,
+				30BAC5DA309E5944001B2D45 /* LaunchScreen.storyboard */,
+				30BAC5DC309E5944001B2D45 /* Main.storyboard */,
+				30BAC5DD309E5944001B2D45 /* SceneDelegate.swift */,
+				30BAC5DE309E5944001B2D45 /* ViewController.swift */,
+			);
+			path = "3 Fruit Quest";
+			sourceTree = "<group>";
+		};
 		30D0F77A3094CE5D004BDF71 = {
 			isa = PBXGroup;
 			children = (
-				30D0F7853094CE5D004BDF71 /* 3 Fruit Quest */,
+				30BAC5DF309E5944001B2D45 /* 3 Fruit Quest */,
 				30D0F7843094CE5D004BDF71 /* Products */,
+				1EDED965DB7F892A8A252FD7 /* Pods */,
+				38BB29D1660C63054CE8F446 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +280,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		38BB29D1660C63054CE8F446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				571A6A6EF40843C58C5A11EB /* Pods_3_Fruit_Quest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -63,14 +295,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30D0F7963094CE5E004BDF71 /* Build configuration list for PBXNativeTarget "3 Fruit Quest" */;
 			buildPhases = (
+				90FB094ACBB2379F0B026A40 /* [CP] Check Pods Manifest.lock */,
 				30D0F77F3094CE5D004BDF71 /* Sources */,
 				30D0F7803094CE5D004BDF71 /* Frameworks */,
 				30D0F7813094CE5D004BDF71 /* Resources */,
 			);
 			buildRules = (
 			);
-			fileSystemSynchronizedGroups = (
-				30D0F7853094CE5D004BDF71 /* 3 Fruit Quest */,
+			dependencies = (
 			);
 			name = "3 Fruit Quest";
 			productName = "3 Fruit Quest";
@@ -93,6 +325,7 @@
 				};
 			};
 			buildConfigurationList = 30D0F77E3094CE5D004BDF71 /* Build configuration list for PBXProject "3 Fruit Quest" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -100,8 +333,6 @@
 				Base,
 			);
 			mainGroup = 30D0F77A3094CE5D004BDF71;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 30D0F7843094CE5D004BDF71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -114,22 +345,106 @@
 /* Begin PBXResourcesBuildPhase section */
 		30D0F7813094CE5D004BDF71 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
+				30BAC5FC309E5944001B2D45 /* Fredoka-Bold.ttf in Resources */,
+				30BAC5FD309E5944001B2D45 /* Fredoka-Medium.ttf in Resources */,
+				30BAC5FE309E5944001B2D45 /* Fredoka-Regular.ttf in Resources */,
+				30BAC5FF309E5944001B2D45 /* Fredoka-SemiBold.ttf in Resources */,
+				30BAC600309E5944001B2D45 /* Assets.xcassets in Resources */,
+				30BAC602309E5944001B2D45 /* LaunchScreen.storyboard in Resources */,
+				30BAC603309E5944001B2D45 /* Main.storyboard in Resources */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90FB094ACBB2379F0B026A40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-3 Fruit Quest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30D0F77F3094CE5D004BDF71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
+				30BAC5E0309E5944001B2D45 /* CustomTabBar.swift in Sources */,
+				30BAC5E1309E5944001B2D45 /* GroveButtons.swift in Sources */,
+				30BAC5E2309E5944001B2D45 /* IllustratedCells.swift in Sources */,
+				30BAC5E3309E5944001B2D45 /* LivingFruitView.swift in Sources */,
+				30BAC5E4309E5944001B2D45 /* RitualAnimations.swift in Sources */,
+				30BAC5E5309E5944001B2D45 /* ScreenHeroImage.swift in Sources */,
+				30BAC5E6309E5944001B2D45 /* SharedUI.swift in Sources */,
+				30BAC5E7309E5944001B2D45 /* AppBackgroundView.swift in Sources */,
+				30BAC5E8309E5944001B2D45 /* AppTheme.swift in Sources */,
+				30BAC5E9309E5944001B2D45 /* View+ScreenChrome.swift in Sources */,
+				30BAC5EA309E5944001B2D45 /* HomeView.swift in Sources */,
+				30BAC5EB309E5944001B2D45 /* InsightsView.swift in Sources */,
+				30BAC5EC309E5944001B2D45 /* ActivityLogView.swift in Sources */,
+				30BAC5ED309E5944001B2D45 /* AddActivitySheet.swift in Sources */,
+				30BAC5EE309E5944001B2D45 /* OnboardingView.swift in Sources */,
+				30BAC5EF309E5944001B2D45 /* QuestsView.swift in Sources */,
+				30BAC5F0309E5944001B2D45 /* SettingsView.swift in Sources */,
+				30BAC5F1309E5944001B2D45 /* ActivityEntry.swift in Sources */,
+				30BAC5F2309E5944001B2D45 /* AppLinks.swift in Sources */,
+				30BAC5F3309E5944001B2D45 /* FruitSpecies.swift in Sources */,
+				30BAC5F4309E5944001B2D45 /* PetMood.swift in Sources */,
+				30BAC5F5309E5944001B2D45 /* PetProfile.swift in Sources */,
+				30BAC5F6309E5944001B2D45 /* PetStore.swift in Sources */,
+				30BAC5F7309E5944001B2D45 /* VitalityEngine.swift in Sources */,
+				30BAC5F8309E5944001B2D45 /* AppDelegate.swift in Sources */,
+				30BAC5F9309E5944001B2D45 /* ContentView.swift in Sources */,
+				30BAC5FA309E5944001B2D45 /* SceneDelegate.swift in Sources */,
+				30BAC5FB309E5944001B2D45 /* ViewController.swift in Sources */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		30BAC5DA309E5944001B2D45 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BAC5D9309E5944001B2D45 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30BAC5DC309E5944001B2D45 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30BAC5DB309E5944001B2D45 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		30D0F7973094CE5E004BDF71 /* Debug configuration for PBXNativeTarget "3 Fruit Quest" */ = {
+		30D0F7973094CE5E004BDF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AA704F3B633DBC194F7F24A /* Pods-3 Fruit Quest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -138,30 +453,37 @@
 				DEVELOPMENT_TEAM = AR6AN34RS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "3 Fruit Quest/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fruit Quest : apple";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "home.--Fruit-Quest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fruit.quest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		30D0F7983094CE5E004BDF71 /* Release configuration for PBXNativeTarget "3 Fruit Quest" */ = {
+		30D0F7983094CE5E004BDF71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5C9C9AB6FE2D135BD11D247 /* Pods-3 Fruit Quest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -170,29 +492,35 @@
 				DEVELOPMENT_TEAM = AR6AN34RS9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "3 Fruit Quest/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fruit Quest : apple";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "home.--Fruit-Quest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fruit.quest.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		30D0F7993094CE5E004BDF71 /* Debug configuration for PBXProject "3 Fruit Quest" */ = {
+		30D0F7993094CE5E004BDF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,7 +584,7 @@
 			};
 			name = Debug;
 		};
-		30D0F79A3094CE5E004BDF71 /* Release configuration for PBXProject "3 Fruit Quest" */ = {
+		30D0F79A3094CE5E004BDF71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -319,21 +647,22 @@
 		30D0F77E3094CE5D004BDF71 /* Build configuration list for PBXProject "3 Fruit Quest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30D0F7993094CE5E004BDF71 /* Debug configuration for PBXProject "3 Fruit Quest" */,
-				30D0F79A3094CE5E004BDF71 /* Release configuration for PBXProject "3 Fruit Quest" */,
+				30D0F7993094CE5E004BDF71 /* Debug */,
+				30D0F79A3094CE5E004BDF71 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		30D0F7963094CE5E004BDF71 /* Build configuration list for PBXNativeTarget "3 Fruit Quest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30D0F7973094CE5E004BDF71 /* Debug configuration for PBXNativeTarget "3 Fruit Quest" */,
-				30D0F7983094CE5E004BDF71 /* Release configuration for PBXNativeTarget "3 Fruit Quest" */,
+				30D0F7973094CE5E004BDF71 /* Debug */,
+				30D0F7983094CE5E004BDF71 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
 	rootObject = 30D0F77B3094CE5D004BDF71 /* Project object */;
-	validationLevel = 1;
 }
