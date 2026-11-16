@@ -18,21 +18,21 @@ enum AppTab: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .home: return "Companion"
-        case .log: return "Log"
-        case .quests: return "Care"
-        case .insights: return "Pulse"
-        case .settings: return "Nest"
+        case .home: return "Stem"
+        case .log: return "Ledger"
+        case .quests: return "Seal"
+        case .insights: return "Radar"
+        case .settings: return "Roots"
         }
     }
 
     var artName: String {
         switch self {
-        case .home: return "TabCompanion"
-        case .log: return "TabLog"
-        case .quests: return "TabCare"
-        case .insights: return "TabPulse"
-        case .settings: return "TabSettings"
+        case .home: return "TabStem"
+        case .log: return "TabLedger"
+        case .quests: return "TabSeal"
+        case .insights: return "TabRadar"
+        case .settings: return "TabRoots"
         }
     }
 }
@@ -50,7 +50,7 @@ struct CustomTabBar: View {
                     tabButton(tab)
                 }
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal, 6)
             .padding(.top, 10)
             .padding(.bottom, 12)
         }
@@ -65,31 +65,29 @@ struct CustomTabBar: View {
     }
 
     private var dockBackdrop: some View {
-        ZStack {
-            Image("TabDock")
-                .resizable()
-                .scaledToFill()
-                .frame(height: 86)
-                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    Color.white.opacity(0.28),
-                                    AppTheme.canopy.opacity(0.18)
-                                ],
-                                startPoint: .top,
-                                endPoint: .bottom
-                            )
+        Image("TabDock")
+            .resizable()
+            .scaledToFill()
+            .frame(height: 86)
+            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color.white.opacity(0.16),
+                                AppTheme.canopy.opacity(0.35)
+                            ],
+                            startPoint: .top,
+                            endPoint: .bottom
                         )
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .stroke(Color.white.opacity(0.45), lineWidth: 1.2)
-                )
-                .shadow(color: AppDepth.liftShadow, radius: 18, y: 10)
-        }
+                    )
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .stroke(Color.white.opacity(0.28), lineWidth: 1)
+            )
+            .shadow(color: AppDepth.liftShadow, radius: 18, y: 10)
     }
 
     private func tabButton(_ tab: AppTab) -> some View {
@@ -105,29 +103,29 @@ struct CustomTabBar: View {
                     if selected {
                         Circle()
                             .fill(AppTheme.pulp.opacity(0.95))
-                            .frame(width: 50, height: 50)
-                            .shadow(color: AppTheme.leaf.opacity(0.35), radius: 10, y: 4)
+                            .frame(width: 48, height: 48)
+                            .shadow(color: AppTheme.dusk.opacity(0.4), radius: 10, y: 4)
                             .overlay(
                                 Circle()
-                                    .stroke(AppTheme.apricot.opacity(0.7), lineWidth: 2)
+                                    .stroke(AppTheme.apricot.opacity(0.75), lineWidth: 2)
                             )
                     }
 
                     Image(tab.artName)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: selected ? 42 : 36, height: selected ? 42 : 36)
+                        .frame(width: selected ? 40 : 34, height: selected ? 40 : 34)
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.white.opacity(0.55), lineWidth: 1))
-                        .scaleEffect(selected && hop ? 1.06 : 1.0)
+                        .overlay(Circle().stroke(Color.white.opacity(0.45), lineWidth: 1))
+                        .scaleEffect(selected && hop ? 1.05 : 1.0)
                         .offset(y: selected ? -12 : 0)
                 }
-                .frame(height: 58)
+                .frame(height: 56)
 
                 Text(tab.title)
                     .font(selected ? AppFont.bold(10) : AppFont.semibold(10))
-                    .foregroundStyle(selected ? Color.white : Color.white.opacity(0.82))
-                    .shadow(color: .black.opacity(0.35), radius: 1, y: 1)
+                    .foregroundStyle(selected ? Color.white : Color.white.opacity(0.8))
+                    .shadow(color: .black.opacity(0.4), radius: 1, y: 1)
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
             }

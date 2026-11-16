@@ -19,7 +19,10 @@ struct HomeView: View {
                 ScrollView {
                     VStack(spacing: AppTheme.sectionSpacing) {
                         header
-                        ScreenHeroImage(art: .companion, height: 140)
+                        if let brief = store.morningBrief {
+                            morningBriefCard(brief)
+                        }
+                        ScreenHeroImage(art: .stem, height: 140)
                         petStage
                         moodCard
                         metricsRow
@@ -55,9 +58,53 @@ struct HomeView: View {
             Spacer()
             VStack(alignment: .trailing, spacing: 6) {
                 StreakBadge(days: store.streakDays)
-                Text(store.profile.species.displayName)
+                Text(store.todayIsSealed ? "Sealed" : "Unsealed")
                     .font(AppTheme.captionFont)
-                    .foregroundStyle(AppTheme.bark.opacity(0.65))
+                    .foregroundStyle(store.todayIsSealed ? AppTheme.moss : AppTheme.dusk)
+            }
+        }
+    }
+
+    private func morningBriefCard(_ brief: MorningBrief) -> some View {
+        GroveCard(accent: AppTheme.apricot) {
+            VStack(alignment: .leading, spacing: 12) {
+                Label("Morning Brief", systemImage: "sun.horizon.fill")
+                    .font(AppFont.semibold(18))
+                    .foregroundStyle(AppTheme.dusk)
+
+                Text(brief.quietWindowLabel)
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.bark.opacity(0.75))
+
+                if !brief.residueNote.isEmpty {
+                    Text("Yesterday’s residue: \(brief.residueNote)")
+                        .font(AppTheme.bodyFont)
+                        .foregroundStyle(AppTheme.soil)
+                }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Carried intentions")
+                        .font(AppTheme.captionFont)
+                        .foregroundStyle(AppTheme.bark.opacity(0.7))
+                    ForEach(brief.carryIntentions) { intention in
+                        HStack(spacing: 8) {
+                            Image(systemName: "arrow.forward.circle.fill")
+                                .foregroundStyle(AppTheme.leaf)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(intention.title)
+                                    .font(AppFont.semibold(14))
+                                    .foregroundStyle(AppTheme.soil)
+                                Text(intention.detail)
+                                    .font(AppTheme.captionFont)
+                                    .foregroundStyle(AppTheme.bark.opacity(0.7))
+                            }
+                        }
+                    }
+                }
+
+                GroveButton(title: "Begin with these", style: .soft) {
+                    store.dismissMorningBrief()
+                }
             }
         }
     }
@@ -101,6 +148,11 @@ struct HomeView: View {
                     Text(store.mood.message)
                         .font(AppTheme.bodyFont)
                         .foregroundStyle(AppTheme.bark.opacity(0.75))
+                    if !store.todayIsSealed {
+                        Text("Seal the day in the Seal tab to lock tonight’s carry.")
+                            .font(AppTheme.captionFont)
+                            .foregroundStyle(AppTheme.dusk)
+                    }
                 }
             }
         }
@@ -132,17 +184,16 @@ struct HomeView: View {
     private var quickActions: some View {
         GroveCard {
             VStack(alignment: .leading, spacing: 14) {
-                SectionHeader(title: "Quick nurture", subtitle: "Manual entries keep the companion honest.")
+                SectionHeader(
+                    title: "Quick ledger",
+                    subtitle: "Manual entries only — honesty over sensors."
+                )
                 HStack(spacing: 10) {
                     GrovePillButton(title: "+1k", artName: ActivityKind.steps.artName) {
-                        withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
-                            store.addEntry(kind: .steps, amount: 1000)
-                        }
+                        store.addEntry(kind: .steps, amount: 1000)
                     }
                     GrovePillButton(title: "+10m", artName: ActivityKind.walkMinutes.artName) {
-                        withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
-                            store.addEntry(kind: .walkMinutes, amount: 10)
-                        }
+                        store.addEntry(kind: .walkMinutes, amount: 10)
                     }
                     GroveButton(title: "Custom", style: .soft) {
                         showQuickLog = true
@@ -155,10 +206,10 @@ struct HomeView: View {
     private var greeting: String {
         let hour = Calendar.current.component(.hour, from: Date())
         switch hour {
-        case 5..<12: return "Morning check-in"
-        case 12..<17: return "Afternoon check-in"
-        case 17..<22: return "Evening check-in"
-        default: return "Late check-in"
+        case 5..<12: return "Morning stem check"
+        case 12..<17: return "Afternoon stem check"
+        case 17..<22: return "Evening seal window"
+        default: return "Late stem check"
         }
     }
 }

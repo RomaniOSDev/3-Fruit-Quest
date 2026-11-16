@@ -27,8 +27,8 @@ struct ActivityLogView: View {
 
                         if store.todaysEntries().isEmpty {
                             IllustratedEmptyHint(
-                                title: "Nothing logged yet",
-                                detail: "Add steps, walks, water, or stretches to wake your companion.",
+                                title: "Ledger is empty",
+                                detail: "Add steps, walks, water, or stretches — then seal the day when ready.",
                                 artName: "IconEmptyLog"
                             )
                         } else {
@@ -61,10 +61,10 @@ struct ActivityLogView: View {
     private var header: some View {
         HStack(alignment: .center, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Manual log")
+                Text("Movement ledger")
                     .font(AppTheme.headlineFont)
                     .foregroundStyle(AppTheme.soil)
-                Text("No Health sync. You decide what counts today.")
+                Text("Typed by hand — no Health sync, no silent padding.")
                     .font(AppTheme.bodyFont)
                     .foregroundStyle(AppTheme.bark.opacity(0.75))
                     .fixedSize(horizontal: false, vertical: true)

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct InsightsView: View {
     @EnvironmentObject private var store: PetStore
+    @State private var slipNote = ""
+    @State private var selectedSlip: SlipKind = .fatigue
 
     var body: some View {
         NavigationStack {
@@ -18,14 +20,15 @@ struct InsightsView: View {
                 ScrollView {
                     VStack(spacing: AppTheme.sectionSpacing) {
                         SectionHeader(
-                            title: "Weekly pulse",
-                            subtitle: "Vitality from your manual entries over seven days."
+                            title: "Slip radar",
+                            subtitle: "Tag why movement slipped. Patterns shape your quiet-walk window."
                         )
 
-                        ScreenHeroImage(art: .pulse, height: 140)
-                        vitalityChart
+                        ScreenHeroImage(art: .radar, height: 140)
+                        quietWindowCard
+                        slipComposer
+                        slipChart
                         weeklyStats
-                        companionSettings
                     }
                     .padding(.horizontal, AppTheme.screenPadding)
                     .padding(.top, AppTheme.contentTop)
@@ -39,37 +42,97 @@ struct InsightsView: View {
         .transparentScreenChrome()
     }
 
-    private var vitalityChart: some View {
+    private var quietWindowCard: some View {
+        GroveCard(accent: AppTheme.apricot) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Suggested quiet walk")
+                    .font(AppFont.semibold(17))
+                    .foregroundStyle(AppTheme.soil)
+                if let hour = store.suggestedQuietHour() {
+                    Text(String(format: "%02d:00–%02d:00 · from your ledger timing", hour, (hour + 1) % 24))
+                        .font(AppTheme.bodyFont)
+                        .foregroundStyle(AppTheme.bark.opacity(0.8))
+                } else {
+                    Text("Log a few walks in Ledger to unlock a quiet window.")
+                        .font(AppTheme.bodyFont)
+                        .foregroundStyle(AppTheme.bark.opacity(0.75))
+                }
+            }
+        }
+    }
+
+    private var slipComposer: some View {
+        GroveCard(accent: AppTheme.dusk) {
+            VStack(alignment: .leading, spacing: 12) {
+                SectionHeader(
+                    title: "Tag a slip",
+                    subtitle: "Not a streak shamer — a map of what pulled you off the path."
+                )
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(SlipKind.allCases) { kind in
+                            GrovePillButton(
+                                title: kind.title,
+                                isSelected: selectedSlip == kind
+                            ) {
+                                selectedSlip = kind
+                            }
+                        }
+                    }
+                }
+
+                Text(selectedSlip.detail)
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.bark.opacity(0.7))
+
+                TextField("Optional note", text: $slipNote)
+                    .font(AppTheme.bodyFont)
+                    .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(Color.white.opacity(0.72))
+                    )
+
+                GroveButton(title: "Save slip tag", style: .primary) {
+                    store.addSlip(kind: selectedSlip, note: slipNote)
+                    slipNote = ""
+                }
+            }
+        }
+    }
+
+    private var slipChart: some View {
         GroveCard {
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Vitality trend")
+            VStack(alignment: .leading, spacing: 14) {
+                Text("14-day slip map")
                     .font(AppFont.semibold(17))
                     .foregroundStyle(AppTheme.soil)
 
-                HStack(alignment: .bottom, spacing: 8) {
-                    ForEach(store.recentDays) { day in
-                        VStack(spacing: 8) {
-                            RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                .fill(
-                                    LinearGradient(
-                                        colors: [
-                                            store.profile.species.ripeColor.opacity(0.35 + day.vitality / 140),
-                                            store.profile.species.leafAccent.opacity(0.8)
-                                        ],
-                                        startPoint: .bottom,
-                                        endPoint: .top
-                                    )
-                                )
-                                .frame(height: max(12, CGFloat(day.vitality) * 1.35))
-
-                            Text(shortDay(day.dayKey))
-                                .font(AppFont.medium(11))
-                                .foregroundStyle(AppTheme.bark.opacity(0.65))
+                ForEach(store.slipRadar, id: \.kind) { row in
+                    HStack(spacing: 10) {
+                        Image(systemName: row.kind.symbolName)
+                            .foregroundStyle(AppTheme.dusk)
+                            .frame(width: 22)
+                        Text(row.kind.title)
+                            .font(AppTheme.captionFont)
+                            .foregroundStyle(AppTheme.soil)
+                            .frame(width: 88, alignment: .leading)
+                        GeometryReader { geo in
+                            ZStack(alignment: .leading) {
+                                Capsule().fill(AppTheme.bark.opacity(0.12))
+                                Capsule()
+                                    .fill(AppTheme.peach)
+                                    .frame(width: max(6, geo.size.width * barFraction(row.count)))
+                            }
                         }
-                        .frame(maxWidth: .infinity)
+                        .frame(height: 10)
+                        Text("\(row.count)")
+                            .font(AppFont.semibold(13))
+                            .foregroundStyle(AppTheme.canopy)
+                            .frame(width: 24, alignment: .trailing)
                     }
                 }
-                .frame(height: 160, alignment: .bottom)
             }
         }
     }
@@ -77,8 +140,8 @@ struct InsightsView: View {
     private var weeklyStats: some View {
         let days = store.recentDays
         let totalSteps = days.reduce(0) { $0 + $1.steps }
+        let sealedDays = days.filter { day in store.seals.contains { $0.dayKey == day.dayKey } }.count
         let avgVitality = days.isEmpty ? 0 : days.reduce(0.0) { $0 + $1.vitality } / Double(days.count)
-        let activeDays = days.filter { $0.steps > 0 || $0.walkMinutes > 0 }.count
 
         return HStack(spacing: 10) {
             IllustratedMetricCell(
@@ -87,52 +150,23 @@ struct InsightsView: View {
                 artName: ActivityKind.steps.artName
             )
             IllustratedMetricCell(
-                title: "Avg vitality",
-                value: "\(Int(avgVitality.rounded()))",
+                title: "Sealed days",
+                value: "\(sealedDays)",
                 artName: "IconStreak",
                 accent: AppTheme.peach
             )
             IllustratedMetricCell(
-                title: "Active days",
-                value: "\(activeDays)",
+                title: "Avg vitality",
+                value: "\(Int(avgVitality.rounded()))",
                 artName: ActivityKind.walkMinutes.artName,
                 accent: AppTheme.apricot
             )
         }
     }
 
-    private var companionSettings: some View {
-        GroveCard {
-            VStack(alignment: .leading, spacing: 14) {
-                SectionHeader(
-                    title: "Need a tune-up?",
-                    subtitle: "Companion prefs, rate, policy and terms live in Nest."
-                )
-                HStack(spacing: 12) {
-                    ArtThumb(name: store.profile.species.artName, size: 52)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(store.profile.name)
-                            .font(AppFont.semibold(17))
-                            .foregroundStyle(AppTheme.soil)
-                        Text("Goal \(store.profile.dailyStepGoal) steps")
-                            .font(AppTheme.captionFont)
-                            .foregroundStyle(AppTheme.bark.opacity(0.7))
-                    }
-                    Spacer()
-                }
-            }
-        }
-    }
-
-    private func shortDay(_ key: String) -> String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd"
-        guard let date = formatter.date(from: key) else { return "—" }
-        let out = DateFormatter()
-        out.locale = Locale(identifier: "en_US")
-        out.dateFormat = "EEE"
-        return out.string(from: date)
+    private func barFraction(_ count: Int) -> CGFloat {
+        let maxCount = max(1, store.slipRadar.map(\.count).max() ?? 1)
+        return CGFloat(count) / CGFloat(maxCount)
     }
 
     private func compact(_ value: Int) -> String {

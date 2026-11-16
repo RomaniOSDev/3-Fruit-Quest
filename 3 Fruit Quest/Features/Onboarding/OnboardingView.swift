@@ -72,11 +72,11 @@ struct OnboardingView: View {
                 )
 
                 VStack(spacing: 10) {
-                    Text("Meet your living fruit")
+                    Text("Close the day. Carry the stem.")
                         .font(AppTheme.titleFont)
                         .foregroundStyle(AppTheme.soil)
                         .multilineTextAlignment(.center)
-                    Text("Walk more and it blooms. Slow down and it softens, fades, and wilts. Everything is logged by hand — no sensors required.")
+                    Text("A living fruit mirrors your movement. Seal evenings, brief mornings, and tag slips — all by hand, no Health sync.")
                         .font(AppTheme.bodyFont)
                         .foregroundStyle(AppTheme.bark.opacity(0.8))
                         .multilineTextAlignment(.center)
@@ -163,7 +163,7 @@ struct OnboardingView: View {
                 VStack(alignment: .leading, spacing: 14) {
                     SectionHeader(
                         title: "Set today’s pace",
-                        subtitle: "You will enter steps manually. This goal shapes your fruit’s glow."
+                        subtitle: "You enter steps manually. This goal shapes seal readiness."
                     )
                     Slider(value: Binding(
                         get: { Double(dailyGoal) },
@@ -199,7 +199,7 @@ struct OnboardingView: View {
                 }
             }
 
-            GroveButton(title: step == 3 ? "Begin care" : "Continue", style: .primary) {
+            GroveButton(title: step == 3 ? "Open the stem" : "Continue", style: .primary) {
                 if step < 3 {
                     withAnimation { step += 1 }
                 } else {

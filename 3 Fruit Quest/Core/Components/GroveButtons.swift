@@ -220,6 +220,51 @@ struct GroveLinkRowButton: View {
     }
 }
 
+struct GroveNoteField: View {
+    let placeholder: String
+    @Binding var text: String
+    var minHeight: CGFloat = 96
+
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            RoundedRectangle(cornerRadius: AppTheme.controlRadius, style: .continuous)
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            AppTheme.pulp.opacity(0.92),
+                            AppTheme.blossom.opacity(0.28)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: AppTheme.controlRadius, style: .continuous)
+                        .stroke(AppTheme.canopy.opacity(0.22), lineWidth: 1.2)
+                )
+
+            if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                Text(placeholder)
+                    .font(AppTheme.bodyFont)
+                    .foregroundStyle(AppTheme.bark.opacity(0.42))
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 14)
+                    .allowsHitTesting(false)
+            }
+
+            TextEditor(text: $text)
+                .font(AppTheme.bodyFont)
+                .foregroundStyle(AppTheme.soil)
+                .scrollContentBackground(.hidden)
+                .tint(AppTheme.leaf)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 6)
+                .frame(minHeight: minHeight)
+        }
+        .frame(minHeight: minHeight)
+    }
+}
+
 /// Backwards-compatible alias used across screens.
 struct PrimaryButton: View {
     let title: String

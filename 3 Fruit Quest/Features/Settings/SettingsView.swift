@@ -22,8 +22,8 @@ struct SettingsView: View {
                 ScrollView {
                     VStack(spacing: AppTheme.sectionSpacing) {
                         SectionHeader(
-                            title: "Nest",
-                            subtitle: "Tune care preferences and legal links."
+                            title: "Roots",
+                            subtitle: "Stem prefs, quiet goals, and legal links."
                         )
 
                         companionCard
@@ -48,7 +48,7 @@ struct SettingsView: View {
     private var companionCard: some View {
         GroveCard {
             VStack(alignment: .leading, spacing: 16) {
-                SectionHeader(title: "Companion", subtitle: "Name, pace, and fruit form.")
+                SectionHeader(title: "Living stem", subtitle: "Name, pace, and fruit form.")
 
                 HStack(spacing: 12) {
                     ArtThumb(name: store.profile.species.artName, size: 64)
@@ -116,7 +116,7 @@ struct SettingsView: View {
         VStack(spacing: 12) {
             SectionHeader(
                 title: "Support & legal",
-                subtitle: "Links are managed in AppLinks."
+                subtitle: "Rate, policy, and terms — URLs live in AppLinks."
             )
 
             GroveLinkRowButton(

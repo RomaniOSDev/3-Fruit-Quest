@@ -12,9 +12,9 @@ struct AppBackgroundView: View {
         ZStack {
             LinearGradient(
                 colors: [
-                    Color(red: 0.86, green: 0.93, blue: 0.89),
-                    Color(red: 0.93, green: 0.90, blue: 0.82),
-                    Color(red: 0.88, green: 0.84, blue: 0.74)
+                    Color(red: 0.70, green: 0.78, blue: 0.72),
+                    Color(red: 0.86, green: 0.78, blue: 0.62),
+                    Color(red: 0.55, green: 0.48, blue: 0.36)
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -22,20 +22,19 @@ struct AppBackgroundView: View {
 
             GeometryReader { geo in
                 Circle()
-                    .fill(AppTheme.moss.opacity(0.18))
-                    .frame(width: geo.size.width * 0.72)
-                    .blur(radius: 2)
-                    .offset(x: -geo.size.width * 0.28, y: -geo.size.height * 0.08)
+                    .fill(AppTheme.canopy.opacity(0.22))
+                    .frame(width: geo.size.width * 0.85)
+                    .offset(x: -geo.size.width * 0.35, y: -geo.size.height * 0.12)
 
                 Circle()
-                    .fill(AppTheme.peach.opacity(0.22))
-                    .frame(width: geo.size.width * 0.58)
-                    .offset(x: geo.size.width * 0.48, y: geo.size.height * 0.18)
+                    .fill(AppTheme.dusk.opacity(0.28))
+                    .frame(width: geo.size.width * 0.7)
+                    .offset(x: geo.size.width * 0.42, y: geo.size.height * 0.22)
 
                 Ellipse()
-                    .fill(AppTheme.leaf.opacity(0.12))
-                    .frame(width: geo.size.width * 1.1, height: geo.size.height * 0.42)
-                    .offset(y: geo.size.height * 0.62)
+                    .fill(AppTheme.leaf.opacity(0.14))
+                    .frame(width: geo.size.width * 1.2, height: geo.size.height * 0.38)
+                    .offset(y: geo.size.height * 0.68)
             }
         }
         .ignoresSafeArea()

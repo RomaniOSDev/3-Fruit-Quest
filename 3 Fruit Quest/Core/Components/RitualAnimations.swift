@@ -62,10 +62,10 @@ struct RitualProgressBar: View {
                 if isComplete {
                     HStack {
                         Spacer()
-                        Image(systemName: "sparkle")
-                            .font(.system(size: 9, weight: .bold))
-                            .foregroundStyle(AppTheme.pulp)
-                            .padding(.trailing, 6)
+                        Circle()
+                            .fill(AppTheme.pulp)
+                            .frame(width: 6, height: 6)
+                            .padding(.trailing, 8)
                     }
                     .frame(width: width)
                 }
@@ -106,15 +106,25 @@ struct RitualSparkBurst: View {
         ZStack {
             ForEach(0..<10, id: \.self) { index in
                 let angle = Double(index) / 10 * .pi * 2
-                Image(systemName: index.isMultiple(of: 2) ? "leaf.fill" : "sparkle")
-                    .font(.system(size: index.isMultiple(of: 3) ? 14 : 10, weight: .bold))
-                    .foregroundStyle(index.isMultiple(of: 2) ? AppTheme.leaf : accent)
-                    .offset(
-                        x: expand ? cos(angle) * 56 : 0,
-                        y: expand ? sin(angle) * 40 : 0
-                    )
-                    .opacity(expand ? 0 : 1)
-                    .scaleEffect(expand ? 1.3 : 0.3)
+                let leaf = index.isMultiple(of: 2)
+                Group {
+                    if leaf {
+                        Capsule()
+                            .fill(AppTheme.leaf)
+                            .frame(width: 8, height: 14)
+                            .rotationEffect(.degrees(Double(index) * 36))
+                    } else {
+                        Circle()
+                            .fill(accent)
+                            .frame(width: index.isMultiple(of: 3) ? 7 : 5, height: index.isMultiple(of: 3) ? 7 : 5)
+                    }
+                }
+                .offset(
+                    x: expand ? cos(angle) * 56 : 0,
+                    y: expand ? sin(angle) * 40 : 0
+                )
+                .opacity(expand ? 0 : 1)
+                .scaleEffect(expand ? 1.3 : 0.3)
             }
         }
         .allowsHitTesting(false)

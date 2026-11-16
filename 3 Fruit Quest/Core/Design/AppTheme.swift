@@ -28,19 +28,21 @@ enum AppFont {
 }
 
 enum AppTheme {
-    static let canopy = Color(red: 0.12, green: 0.30, blue: 0.23)
-    static let leaf = Color(red: 0.24, green: 0.55, blue: 0.43)
-    static let moss = Color(red: 0.42, green: 0.63, blue: 0.36)
-    static let peach = Color(red: 0.94, green: 0.63, blue: 0.48)
-    static let apricot = Color(red: 0.96, green: 0.74, blue: 0.42)
-    static let blossom = Color(red: 0.95, green: 0.78, blue: 0.72)
-    static let skyMist = Color(red: 0.91, green: 0.95, blue: 0.92)
-    static let groveFog = Color(red: 0.78, green: 0.88, blue: 0.82)
-    static let soil = Color(red: 0.17, green: 0.14, blue: 0.11)
-    static let bark = Color(red: 0.35, green: 0.28, blue: 0.22)
-    static let pulp = Color(red: 0.98, green: 0.96, blue: 0.92)
-    static let wilt = Color(red: 0.55, green: 0.48, blue: 0.32)
-    static let dangerSoft = Color(red: 0.78, green: 0.38, blue: 0.32)
+    /// Dusk canopy — deeper, evening-seal palette (not the old soft morning sticker look).
+    static let canopy = Color(red: 0.08, green: 0.20, blue: 0.16)
+    static let leaf = Color(red: 0.28, green: 0.48, blue: 0.34)
+    static let moss = Color(red: 0.36, green: 0.55, blue: 0.32)
+    static let peach = Color(red: 0.90, green: 0.55, blue: 0.34)
+    static let apricot = Color(red: 0.93, green: 0.68, blue: 0.28)
+    static let blossom = Color(red: 0.88, green: 0.72, blue: 0.58)
+    static let skyMist = Color(red: 0.82, green: 0.88, blue: 0.84)
+    static let groveFog = Color(red: 0.62, green: 0.72, blue: 0.64)
+    static let soil = Color(red: 0.12, green: 0.10, blue: 0.08)
+    static let bark = Color(red: 0.32, green: 0.24, blue: 0.18)
+    static let pulp = Color(red: 0.97, green: 0.94, blue: 0.88)
+    static let wilt = Color(red: 0.50, green: 0.42, blue: 0.30)
+    static let dangerSoft = Color(red: 0.74, green: 0.34, blue: 0.28)
+    static let dusk = Color(red: 0.55, green: 0.38, blue: 0.22)
 
     static let titleFont = AppFont.bold(34)
     static let headlineFont = AppFont.semibold(22)
@@ -50,8 +52,8 @@ enum AppTheme {
     static let buttonFont = AppFont.semibold(17)
     static let tabFont = AppFont.semibold(11)
 
-    static let cardRadius: CGFloat = 22
-    static let controlRadius: CGFloat = 16
+    static let cardRadius: CGFloat = 20
+    static let controlRadius: CGFloat = 14
     static let tabBarClearance: CGFloat = 112
     static let screenPadding: CGFloat = 20
     static let sectionSpacing: CGFloat = 18
@@ -60,6 +62,6 @@ enum AppTheme {
 }
 
 enum AppDepth {
-    static let softShadow = Color.black.opacity(0.10)
-    static let liftShadow = Color.black.opacity(0.16)
+    static let softShadow = Color.black.opacity(0.12)
+    static let liftShadow = Color.black.opacity(0.20)
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 enum ScreenArt: String {
     case onboarding = "ScreenOnboarding"
+    case stem = "ScreenStem"
     case companion = "ScreenCompanion"
     case log = "ScreenLog"
+    case seal = "ScreenSeal"
     case care = "ScreenCare"
+    case radar = "ScreenRadar"
     case pulse = "ScreenPulse"
 }
 
@@ -28,7 +31,7 @@ struct ScreenHeroImage: View {
             .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous)
-                    .stroke(Color.white.opacity(0.35), lineWidth: 1)
+                    .stroke(Color.white.opacity(0.28), lineWidth: 1)
             )
             .shadow(color: AppDepth.softShadow, radius: 12, y: 6)
             .accessibilityHidden(true)
